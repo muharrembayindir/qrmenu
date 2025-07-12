@@ -15,28 +15,83 @@ function MenuPage() {
         {
             category: "🍰 Tatlılar",
             products: [
-                { id: 1, name: "Tiramisu", description: "Kremalı tatlı", price: 40, image: "/images/product0.jpg" },
-                { id: 2, name: "Sufle", description: "Akışkan çikolata", price: 35, image: "/images/product1.jpg" },
-                { id: 3, name: "Cheesecake", description: "Orman meyveli", price: 42, image: "/images/product2.jpg" }
+                {
+                    id: 1,
+                    name: "Tiramisu",
+                    description: "Kremalı tatlı",
+                    price: 40,
+                    image: `${process.env.PUBLIC_URL}/images/product0.jpg` 
+                },
+                {
+                    id: 2,
+                    name: "Sufle",
+                    description: "Akışkan çikolata",
+                    price: 35,
+                    image: `${process.env.PUBLIC_URL}/images/product1.jpg`
+                },
+                {
+                    id: 3,
+                    name: "Cheesecake",
+                    description: "Orman meyveli",
+                    price: 42,
+                    image: `${process.env.PUBLIC_URL}/images/product2.jpg`
+                }
             ]
         },
         {
             category: "🍗 Ana Yemekler",
             products: [
-                { id: 4, name: "Adana Kebap", description: "Acılı, közlenmiş biberle", price: 60, image: "/images/product3.jpg" },
-                { id: 5, name: "Izgara Köfte", description: "6 parça, pilav yanında", price: 55, image: "/images/product4.jpg" },
-                { id: 6, name: "Tavuk Şiş", description: "Izgara tavuk şiş", price: 50, image: "/images/product5.jpg" }
+                {
+                    id: 4,
+                    name: "Adana Kebap",
+                    description: "Acılı, közlenmiş biberle",
+                    price: 60,
+                    image: `${process.env.PUBLIC_URL}/images/product3.jpg`
+                },
+                {
+                    id: 5,
+                    name: "Izgara Köfte",
+                    description: "6 parça, pilav yanında",
+                    price: 55,
+                    image: `${process.env.PUBLIC_URL}/images/product4.jpg`
+                },
+                {
+                    id: 6,
+                    name: "Tavuk Şiş",
+                    description: "Izgara tavuk şiş",
+                    price: 50,
+                    image: `${process.env.PUBLIC_URL}/images/product5.jpg`
+                }
             ]
         },
         {
             category: "🥤 İçecekler",
             products: [
-                { id: 7, name: "Kola", description: "330ml kutu", price: 20, image: "/images/product6.jpg" },
-                { id: 8, name: "Ayran", description: "Yoğurtlu içecek", price: 12, image: "/images/product7.jpg" },
-                { id: 9, name: "Çay", description: "Demleme çay", price: 8, image: "/images/product8.jpg" }
+                {
+                    id: 7,
+                    name: "Kola",
+                    description: "330ml kutu",
+                    price: 20,
+                    image: `${process.env.PUBLIC_URL}/images/product6.jpg`
+                },
+                {
+                    id: 8,
+                    name: "Ayran",
+                    description: "Yoğurtlu içecek",
+                    price: 12,
+                    image: `${process.env.PUBLIC_URL}/images/product7.jpg`
+                },
+                {
+                    id: 9,
+                    name: "Çay",
+                    description: "Demleme çay",
+                    price: 8,
+                    image: `${process.env.PUBLIC_URL}/images/product8.jpg`
+                }
             ]
         }
     ];
+
     const [showDetails, setShowDetails] = useState(false);
     const toggleDetails = () => {
         setShowDetails(prev => !prev);
@@ -98,7 +153,7 @@ function MenuPage() {
             >
                 <div className="d-flex align-items-center gap-2">
                     <img
-                        src="/images/logo.png"
+                        src={`${process.env.PUBLIC_URL}/images/logo.png`}
                         alt="Logo"
                         style={{ height: "40px", width: "40px", objectFit: "contain", borderRadius: "8px" }}
                     />
